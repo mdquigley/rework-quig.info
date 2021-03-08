@@ -1,12 +1,12 @@
 import React from 'react';
 
-
 const NotFoundPage = () => {
 
     return (
-        <>
-            <h1>NotFoundPage</h1>
-        </>
+        <div className="not-found-page">
+            <h1>Ahhhh!</h1>
+            <p>404 Page Not Found</p>
+        </div>
     );
 }
 
