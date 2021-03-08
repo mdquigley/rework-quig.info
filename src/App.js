@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import NavBar from './NavBar';
+import Footer from './Footer';
+import AboutPage from './pages/AboutPage';
+import AlbumArt from './pages/AlbumArt';
+import Discog from './pages/Discog';
+import Misc from './pages/Misc';
+import Posters from './pages/Posters';
+import Technology from './pages/Technology';
+import NotFoundPage from './pages/NotFoundPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <NavBar />
+          <div id="page-body">
+            <Switch>
+              <Route path='/' component={AboutPage} exact/>
+              <Route path='/album-art' component={AlbumArt} />
+              <Route path='/discog' component={Discog} />
+              <Route path='/misc' component={Misc} />
+              <Route path='/posters' component={Posters} />
+              <Route path='/technology' component={Technology} />
+              <Route component={NotFoundPage} />
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+      </Router >
+    );
+  }
 }
 
 export default App;
