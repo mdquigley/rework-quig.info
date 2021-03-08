@@ -1,25 +1,20 @@
 import React from 'react';
 import Table from '../components/Table';
+import discogList from '../discogList';
 
 
 const Discog = () => {
 
-    return ( 
+  let entries = discogList;
+
+  return (
     <>
-        <section class="container">
-    <div class="col-md-12">
-      <div class="row">
-        <p>Discography.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="discog" class="container">
-    <Table />
-
-  </section>
+      <section id="discog" class="container">
+        <h3>Discography.</h3>
+        <Table entries={entries} />
+      </section>
     </>
-    );
+  );
 }
 
 export default Discog;

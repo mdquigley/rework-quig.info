@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableRow from '../components/TableRow';
 
-class Table extends Component () {
+const Table = ({ entries }) => (
 
-    render() {
-      return (
-        <>
-        <table class="table">
+  <>
+    <table class="table">
       <thead class="thead-light">
         <tr>
           <th scope="col">Year</th>
@@ -17,13 +15,15 @@ class Table extends Component () {
       </thead>
       <tbody>
 
-        <TableRow />
-       
+        {
+          entries.map((entry, key) => (
+            <TableRow entry={entry} key={key} />
+          ))
+        }
+
       </tbody>
     </table>
-        </>
-      );
-    }
-  }
-  
-  export default Table;
+  </>
+);
+
+export default Table;
