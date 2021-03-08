@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => (
-
-<div class="row">
-      <p class="col-sm-12 text-center">&copy; Mike Quigley 2021</p>
-    </div>
-
+const Footer = () => ( 
+<footer class = "row" >
+  <p class = "col-sm-12 text-center" >&copy; Mike Quigley 2021</p> 
+  </footer>
 );
 
 export default Footer;

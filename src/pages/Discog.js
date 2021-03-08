@@ -1,13 +1,25 @@
 import React from 'react';
+import Table from '../components/Table';
 
 
 const Discog = () => {
 
-    return (
-        <>
-            <h1>Discog</h1>
-        </>
+    return ( 
+    <>
+        <section class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <p>Discography.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="discog" class="container">
+    <Table />
+
+  </section>
+    </>
     );
 }
 
-export default Discog;  
+export default Discog;

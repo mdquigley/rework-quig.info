@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import AboutPage from './pages/AboutPage';
+import About from './pages/About';
 import AlbumArt from './pages/AlbumArt';
 import Discog from './pages/Discog';
 import Misc from './pages/Misc';
@@ -19,7 +19,7 @@ class App extends Component {
           <NavBar />
           <div id="page-body">
             <Switch>
-              <Route path='/' component={AboutPage} exact/>
+              <Route path='/' component={About} exact/>
               <Route path='/album-art' component={AlbumArt} />
               <Route path='/discog' component={Discog} />
               <Route path='/misc' component={Misc} />
