@@ -1,2 +1,2 @@
 # rework-quig.info  
-Rewriting qui.info using React
+Rewriting quig.info using React
